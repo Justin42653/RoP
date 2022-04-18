@@ -1,0 +1,305 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+} 
+
+@font-face {
+    font-family: 'gwtwofontregular';
+    src: url('fonts/gwtwofont-webfont.woff2') format('woff2'),
+         url('fonts/gwtwofont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cronos Pro';
+    src: url('fonts/CronosPro-Regular.woff2') format('woff2'),
+        url('fonts/CronosPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NewKrytan';
+    src: url('fonts/NewKrytan.woff2') format('woff2'),
+        url('fonts/NewKrytan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section, header {
+    height: 35rem;
+    /* background-image: url("images/leviathan.jpg"); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-family: 'Cronos Pro';
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.newKrytan {
+    font-family: "NewKrytan";
+}
+
+/* HERO */
+#hero {
+    background-image: url("images/leviathan.jpg");
+    background-position-x: -200px;
+    display: flex;
+    user-select: none;
+}
+    #heroTitle {
+        margin: auto;
+        margin-top: 12rem;
+        padding: 0.5rem;
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        position: static;
+        transition: 1s;
+        z-index: 10;
+    }
+        /* ANIMATIONS */
+        #heroTitle.heroTitleScroll {
+                margin-top: 0;
+                position: fixed;
+                margin-left: -50vw;
+                transition: 0s;
+                width: 100vw;
+                font-size: 1rem;
+                background-color: rgba(0, 0, 0, 0.9);
+        }
+            #hT1.hT1 {
+                font-size: 2rem;
+                transition: 0.5s;
+            }  
+            #hT2.hT2 {
+                font-size: 1rem;
+                transition: 0.5s;
+            }
+            #hT3.hT3 {
+                font-size: 0.8rem;
+                transition: 0.5s;
+            }
+
+        #heroTitle h1, #heroTitle h2 {
+            margin: auto;
+            font-family: 'gwtwofontregular';
+            font-weight: normal;
+            font-style: normal;
+        }
+        #heroTitle h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        #heroTitle h2 {
+            margin-top: -0.5rem;
+            font-size: 1.5rem;
+        }
+            #heroTitle h2 span {
+                font-size: 1.2rem;
+            }
+    #heroP {
+        margin: auto;
+        width: 16rem;
+        margin-top: -13rem;
+        text-align: center;
+        font-size: 0.9rem;
+        text-shadow: 3px 0px 3px rgba(0, 0, 0, 0.705);
+    }
+#bounceArrow {
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    width: 2.5rem;
+    margin-left: -1.75rem;
+    bottom: 14rem;
+    font-size: 2.5rem;
+    animation: bounceArrow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounceArrow {
+    0% {
+        bottom: 14rem;
+    } 50% {
+        bottom: 15rem;
+    } 100% {
+        bottom: 14rem;
+    }
+}
+
+/* SECTION */
+section {
+    background-color: rgb(58, 43, 26);
+}
+    .sectionHeader {
+        height: 3rem;
+        display: flex;
+        background-color: rgb(136, 99, 50);
+    }
+        .sectionHeader h2 {
+            margin: auto;
+        }
+    .sectionImg {
+        background-image: url("images/AWR.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 25rem;
+        transition: 1s;
+        animation: imgAni;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+    }
+        #sectionImgTwo {
+            background-image: url("images/C4_Tengu_concept_art.jpg");
+        }
+            #sectionImgThree {
+                background-image: url("images/rEr.jpg");
+            }
+                #sectionImgFour {
+                    background-image: url("images/Kry.jpg");
+                }
+        @keyframes imgAni {
+            0% {
+                background-position-x: 0px;
+            } 50% {
+                background-position-x: 48%;
+            } 100% {
+                background-position-x: 0px;
+            }
+        }
+    .sectionInfo {
+        height: 10rem;
+    }
+        .sectionUi {
+            width: 15rem;
+            height: 3rem;
+            margin: auto;
+            margin-top: -0.65rem;
+            display: flex;
+            flex-direction: column;
+        }
+            .sectionUi h3 {
+                margin: auto;
+                width: fit-content;
+                font-weight: bold;
+            }
+        .sectionUiTop {
+            display: flex;
+            width: 9rem;
+            margin: auto;
+        }
+        .UiButtonWrap {
+            display: flex;
+            margin: auto;
+            width: 5rem;
+        }
+            .UiButtonWrap:nth-child(2), .UiButtonWrap:nth-child(3) {
+                width: 1rem;
+            }
+                .glowCall {
+                    animation: rightGlow;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes rightGlow {
+                    0% {
+                        box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
+                        background-color: black;
+                    } 50% {
+                        box-shadow: 0px 1px 10px rgb(53, 215, 255);
+                        background-color: rgb(53, 215, 255);
+                    } 100% {
+                        box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
+                        background-color: black;
+                    }
+                }
+            .UiButton {
+                box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
+                border: 2px solid white;
+                background-color: black;
+                width: 1rem;
+                height: 1rem;
+                margin: auto;
+                transform: rotate(45deg);
+                cursor: pointer;
+                transition: 0.33s;
+            }
+            .UiButton:first-child {
+                background-color: white;
+            }
+    .sectionDetails {
+        width: 21rem;
+        margin: 0.5rem auto auto auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #lfgToolWrapper {
+    background-image: url("images/rivenEarth.jpg");
+}
+
+    #lfgToolWrapper h1 {
+        color: white;
+        margin: auto;
+        margin-top: 2.5rem;
+    }
+    #lfgToolOuter {
+        border: 1px solid black;
+        height: 20rem;
+        width: 20rem;
+        margin: auto;
+        margin-bottom: 17.5rem;
+        background-color: rgba(0, 0, 0, 0.788);
+    }
+    #upperLfg {
+        height: 2.5rem;
+        display: flex;
+    }
+        #roleWrapper, #intensityToggle {
+            border: 1px solid rgba(255, 255, 255, 0.137);
+            width: 50%;
+            height: 95%;
+            margin: auto;
+            margin-left: 0;
+            display: flex;
+        }
+            #roleWrapper p, #roleSelection, #moodText, #intensityIcons, #intensityToggle p{
+                margin: auto;
+            }
+            #roleWrapper i, #intensityIcons i {
+                cursor: pointer;
+                color: rgb(77, 77, 77);
+            }
+
+
+    #lowerLfg {
+        border-top: none;
+        height: 17.4rem;
+    } */

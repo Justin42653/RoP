@@ -1,0 +1,78 @@
+===== Guild Wars 2: Rite of Passage =====
+
+The fabled leviathon of the depths makes it's 
+way towards Lions Arch. Ally with the
+Lionhawk Coalition to defend your home!
+
+---- Tyria Rediscovered -----
+
+Core Tyria Renewed
+    - Core Maps have been repolished to modernity
+    - Maps near the sea have new challenging bosses
+    alongside visual overhauls near their coastlines
+        - Strike Mission version of each Boss
+            - Adventurer Difficulty for levels 35-80
+            - Normal & Challenge Modes for level 80
+
+Dungeons Made Anew
+    - Dungeons have been repolished to modernity
+        - Scaling from 1 to 5 players
+    - Worthwhile rewards for new and current players
+    - Challenge Mode Difficulty 
+        - Like current explorable mode
+        - Rewards Ascended Gear & Agony Infusions
+        to add Fractals of the Mists relations
+
+The Lionhawk Initiative
+    - Earn unique rewards for leveling a new character
+    the old fashioned way at a massively reduced pace 
+        - Exclusive mounts/titles/badges/skins
+
+----- New Ways to Play -----
+
+New Playable Race: Tengu
+    - New Starting Zone: Dominion of Winds
+    - Written dialogue & toggle-able chirp noises 
+      as speech replacement for all old story content
+        -Who knew the commander's friends spoke bird?!
+
+Core Classes Made New 
+    - When not using an elite specialization gain
+    access to all new profession mechanics & weapons
+        - Land Spears/Tridents/Harpoon Guns
+
+More Character Customization
+    - More faces and hairstyles
+    - No longer limits to armor weight in transmutation
+    - Cross Transmuation for Spears/Tridents/Staves
+    & Harpoon Gun/Rifles
+    - Can show secondary weapon set when stowed
+
+----- UI Improvements -----
+
+New Lfg Tool
+    - Easily find a group of likeminded players
+        - Role search and assignment
+        - Chill or Intense mood toggle 
+New Quest Log
+
+----- New Game Modes -----
+Player Housing
+    - Earn building materials from playing the game
+    - Build with your friends and guildies 
+    - Earn new structure recipes
+
+New PvPvE Map: Lionhawk Front
+    - Endgame Meta Event Map enterable at level 30
+        - Players below level 80 are upscaled
+        - Less Dps Checks, More Mechanics & Activities
+    - 15v15 objective based PvP in designated battleground area
+        - Que up while participating in the Meta Event
+        - Level brackets: 30-79, 80
+    - Quartermasters with unique Lionhawk Front rewards
+
+
+
+
+
+
