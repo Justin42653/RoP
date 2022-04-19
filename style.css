@@ -120,12 +120,10 @@ p {
         text-shadow: 3px 0px 3px rgba(0, 0, 0, 0.705);
     }
 #bounceArrow {
-    margin: auto;
     position: absolute;
     left: 50%;
     width: 2.5rem;
     margin-left: -1.75rem;
-    bottom: 14rem;
     font-size: 2.5rem;
     animation: bounceArrow;
     animation-duration: 1.5s;
@@ -134,11 +132,11 @@ p {
 
 @keyframes bounceArrow {
     0% {
-        bottom: 14rem;
+        top: 24rem;
     } 50% {
-        bottom: 15rem;
+        top: 25rem;
     } 100% {
-        bottom: 14rem;
+        top: 24rem;
     }
 }
 
@@ -163,6 +161,7 @@ section {
         animation: imgAni;
         animation-duration: 15s;
         animation-iteration-count: infinite;
+        animation-play-state: paused;
     }
         #sectionImgTwo {
             background-image: url("images/C4_Tengu_concept_art.jpg");
@@ -186,7 +185,6 @@ section {
         height: 10rem;
     }
         .sectionUi {
-            width: 15rem;
             height: 3rem;
             margin: auto;
             margin-top: -0.65rem;
@@ -195,7 +193,6 @@ section {
         }
             .sectionUi h3 {
                 margin: auto;
-                width: fit-content;
                 font-weight: bold;
             }
         .sectionUiTop {

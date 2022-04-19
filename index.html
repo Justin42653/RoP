@@ -107,7 +107,8 @@
                 <span style="font-family: 'NewKrytan'">-</span> New Starting Zone: Dominion of Winds <br>
                 <span style="font-family: 'NewKrytan'">-</span> Written dialogue & toggle-able chirp noises
                 as speech replacement for all old story content<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Who knew Tyrians spoke bird?!
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Who knew Tyrians spoke
+                bird?!
             </p>
         </div>
     </section>
@@ -129,8 +130,10 @@
             </div>
             <p class="sectionDetails">
                 <span style="font-family: 'NewKrytan'">-</span> Easily find a group of likeminded players<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Role search and assignment<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Chill or Intense mood toggle
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Role search and
+                assignment<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Chill or Intense mood
+                toggle
             </p>
         </div>
     </section>
@@ -164,10 +167,11 @@
         var UiButton = document.getElementsByClassName("UiButton");
         var sectionImg = document.getElementsByClassName("sectionImg");
         var imgVal = 0;
-        var imgArr = ["AWR", "dun", "EE", "c4", "profs", "cus", "rEr", "que", "Kry", "war"];
+        var imgArr = ["AWR", "DUN", "EE", "c4", "profs", "cus", "rEr", "que", "Kry", "war"];
         var UiText = document.getElementsByClassName("UiText");
         var details = document.getElementsByClassName("sectionDetails");
         var glowCall = document.getElementsByClassName("glowCall");
+        var sectionHeader = document.getElementsByClassName("sectionHeader");
 
         document.getElementsByClassName("UiButtonWrap")[2].style.width = "3.3rem";
         document.getElementsByClassName("UiButtonWrap")[3].style.width = "3.3rem";
@@ -214,10 +218,9 @@
                 }
                 if (x == 2) {
                     UiText[0].innerHTML = "The Lionhawk Initiative"
-                    details[0].innerHTML = `<span class="newKrytan">-</span> Earn unique rewards for leveling a new character
+                    details[0].innerHTML = ` Earn unique rewards for leveling a new character
         the old fashioned way at a massively reduced pace  <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="newKrytan">j</span> Mounts, Titles, Badges, Skins, & More<br>
-                                            "We pay our seasoned heroes well for working with new recruits!" - Ryberius Lizardgulper`
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="newKrytan">j</span>"We pay our seasoned heroes well for working with new recruits!" - Ryberius Lizardgulper`
                 }
             }
             if (x >= 3 && x < 6) {
@@ -249,7 +252,7 @@
                     UiText[1].innerHTML = "Customization Enhancements"
                     details[1].innerHTML = `<span style="font-family: 'NewKrytan'">-</span>New faces and hair styles<br>
                                             <span style="font-family: 'NewKrytan'">-</span>No transmutation armor weight limits<br>
-                                            <span style="font-family: 'NewKrytan'">-</span>Cross Transmuting for Spears/Trides/Staves & Rifles/Harpoon Guns<br>
+                                            <span style="font-family: 'NewKrytan'">-</span>Cross Transmuting for certain weapons<br>
                                             <span style="font-family: 'NewKrytan'">-</span>Show off your secondary weapon when stowed`
                 }
             }
@@ -296,14 +299,28 @@
                     details[3].innerHTML = `<span style="font-family: 'NewKrytan'">-</span> Meta Event Map for veterans and fresh recruits<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Focused moreso on coordination, less on dps<br>
                 <span style="font-family: 'NewKrytan'">-</span> Que up for 15v15 PvP Battles while PvE'ing<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Level brackets: 30-79, 80 <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Timed to be sure you won't miss the End Boss`
                 }
             }
 
-            console.log(x);
         }
 
+        function isVisible(e, i) {
+            var x = e.getBoundingClientRect()
+            if (x.top >= 0 && x.left >= 0 && x.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                && x.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+                for (let j = 0; j < 4; j++) {
+                    if (i == j) sectionImg[i].style.animationPlayState = "running";
+                }
+            }
+        }
+
+        window.addEventListener("scroll", () => {
+            isVisible(sectionHeader[0], 0)
+            isVisible(sectionHeader[1], 1)
+            isVisible(sectionHeader[2], 2)
+            isVisible(sectionHeader[3], 3)
+        })
 
     </script>
 
