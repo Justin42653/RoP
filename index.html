@@ -31,6 +31,7 @@
         var hT1 = document.getElementById("hT1");
         var hT2 = document.getElementById("hT2");
         var hT3 = document.getElementById("hT3");
+        var story = document.getElementById("story");
 
         window.addEventListener("scroll", function () {
             if (this.pageYOffset > 200) {
@@ -40,6 +41,11 @@
                     hT2.classList.add("hT2");
                     hT3.classList.add("hT3");
                     document.getElementById("bounceArrow").style.opacity = "0";
+                    if (story.innerHTML == "Full Story") {
+                        story.style.opacity = "0";
+                        story.style.pointerEvents = "none"
+                    }
+                    title.style.zIndex = "100";
                     animateFlag = false;
                 }
             }
@@ -49,6 +55,9 @@
                 hT2.classList.remove("hT2");
                 hT3.classList.remove("hT3");
                 document.getElementById("bounceArrow").style.opacity = "1";
+                story.style.opacity = "1";
+                story.style.pointerEvents = "all";
+                title.style.zIndex = "10";
                 animateFlag = true;
             }
         })
@@ -84,14 +93,13 @@
                 story.style.pointerEvents = "none"
                 storyText.style.opacity = "0";
                 storyTog = true;
-                story.style.pointerEvents = "none"
-                setTimeout(()=>{
-                    storyText.innerHTML = `The age of dragons is over but danger never rests for Tyrians. What is this ancient leviathon that Canthans have spoken of which now rises
-            from the deeps? Why does it make it's way towards Lions Arch? No matter, it's young are already arriving at our doorsteps,
-            there is no time to figure out the answers. <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Tengu of the Dominion of Winds have opened their gates and formed an alliance with the Lion Guard,
-            the Lionhawk Coalition.`
-                storyText.style.opacity = "1";
-                story.style.pointerEvents = "all"
+                setTimeout(() => {
+                    storyText.innerHTML = `"The age of dragons is over but danger never rests for us Tyrians. What is this ancient leviathon that Soo-Won 
+                    defended us from which now rises from the depths of the sea? Where did it come from? Why does it make it's way towards Lions Arch? No matter, it's young are already
+                    arriving at their doorsteps, there is no longer any time to figure out the answers. <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Tengu of the Dominion of
+                    Winds and the Lion Guard have formed into an alliance known as the Lionhawk Coalition. I too will help my newfound allies." - Detective Rama`
+                    storyText.style.opacity = "1";
+                    story.style.pointerEvents = "all"
                 }, 1000)
                 storyText.style.padding = "1rem"
             } else {
@@ -103,7 +111,7 @@
                 story.style.position = "absolute";
                 storyTog = false;
                 story.style.pointerEvents = "none"
-                setTimeout(()=>{
+                setTimeout(() => {
                     storyText.innerHTML = `Full Story`
                     story.style.pointerEvents = "all"
                 }, 1000)
