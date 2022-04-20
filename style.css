@@ -132,13 +132,36 @@ p {
 
 @keyframes bounceArrow {
     0% {
-        top: 24rem;
+        top: 30rem;
     } 50% {
-        top: 25rem;
+        top: 31rem;
     } 100% {
-        top: 24rem;
+        top: 30rem;
     }
 }
+
+/* STORY */
+#story {
+    position: absolute;
+    top: 21.75rem;
+    width: 5rem;
+    left: 50%;
+    margin-left: -3.1rem;
+    z-index: 20;
+    display: flex;
+    border-radius: 15px;
+    user-select: none;
+    cursor: pointer;
+    transition: 1s;
+    text-decoration: underline;
+}
+
+    #story p {
+        padding: 0.33rem;
+        margin: auto;
+        transition: 1s;
+    }
+
 
 /* SECTION */
 section {

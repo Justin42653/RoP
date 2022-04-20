@@ -22,6 +22,7 @@
                 to defend your home!</p>
         </div>
         <p id="bounceArrow" class="newKrytan">p</p>
+
     </header>
     <!-- HERO SCRIPT-->
     <script>
@@ -58,9 +59,62 @@
             title.style.left = "50%";
             title.style.marginLeft = "-10rem";
         }
+
     </script>
 
-    <!-- SECTION ONE -->
+    <!-- STORY -->
+    <div id="story">
+        <p id="storyText">Full Story</p>
+    </div>
+    <!-- STORY SCRIPT -->
+    <script>
+        var story = document.getElementById("story");
+        var storyText = document.getElementById("storyText");
+        var storyTog = false;
+
+        story.addEventListener("click", () => storyFunc());
+        function storyFunc() {
+            if (!storyTog) {
+                story.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                story.style.textDecoration = "none"
+                story.style.top = "13rem";
+                story.style.width = "20rem";
+                story.style.marginLeft = "-10rem";
+                story.style.position = "fixed";
+                story.style.pointerEvents = "none"
+                storyText.style.opacity = "0";
+                storyTog = true;
+                story.style.pointerEvents = "none"
+                setTimeout(()=>{
+                    storyText.innerHTML = `The age of dragons is over but danger never rests for Tyrians. What is this ancient leviathon that Canthans have spoken of which now rises
+            from the deeps? Why does it make it's way towards Lions Arch? No matter, it's young are already arriving at our doorsteps,
+            there is no time to figure out the answers. <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Tengu of the Dominion of Winds have opened their gates and formed an alliance with the Lion Guard,
+            the Lionhawk Coalition.`
+                storyText.style.opacity = "1";
+                story.style.pointerEvents = "all"
+                }, 1000)
+                storyText.style.padding = "1rem"
+            } else {
+                story.style.backgroundColor = "rgba(0, 0, 0, 0)";
+                story.style.textDecoration = "underline"
+                story.style.top = "21.75rem";
+                story.style.width = "5rem";
+                story.style.marginLeft = "-3.1rem";
+                story.style.position = "absolute";
+                storyTog = false;
+                story.style.pointerEvents = "none"
+                setTimeout(()=>{
+                    storyText.innerHTML = `Full Story`
+                    story.style.pointerEvents = "all"
+                }, 1000)
+                storyText.innerHTML = `Full Story`
+                storyText.style.padding = "0.33rem"
+            }
+        }
+
+    </script>
+
+    <!-- SECTIONS -->
     <section id="tyriaRediscovered">
         <div class="sectionHeader">
             <h2>Tyria Rediscovered</h2>
@@ -162,12 +216,12 @@
         </div>
     </section>
 
-    <!-- SECTION ONE SCRIPT -->
+    <!-- SECTION SCRIPT -->
     <script>
         var UiButton = document.getElementsByClassName("UiButton");
         var sectionImg = document.getElementsByClassName("sectionImg");
         var imgVal = 0;
-        var imgArr = ["AWR", "DUN", "EE", "c4", "profs", "cus", "rEr", "que", "Kry", "war"];
+        var imgArr = ["AWR", "DUN", "EE", "c4", "cropped/profsCropped", "cus", "rEr", "que", "Kry", "war"];
         var UiText = document.getElementsByClassName("UiText");
         var details = document.getElementsByClassName("sectionDetails");
         var glowCall = document.getElementsByClassName("glowCall");
@@ -252,7 +306,7 @@
                     UiText[1].innerHTML = "Customization Enhancements"
                     details[1].innerHTML = `<span style="font-family: 'NewKrytan'">-</span>New faces and hair styles<br>
                                             <span style="font-family: 'NewKrytan'">-</span>No transmutation armor weight limits<br>
-                                            <span style="font-family: 'NewKrytan'">-</span>Cross Transmuting for certain weapons<br>
+                                            <span style="font-family: 'NewKrytan'">-</span>Cross Transmuting for certain weapon types<br>
                                             <span style="font-family: 'NewKrytan'">-</span>Show off your secondary weapon when stowed`
                 }
             }
