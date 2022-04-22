@@ -315,7 +315,13 @@ section {
                 }
                 #roleText {
                     margin-left: 0.15rem;
+                    display: flex;
                 }
+                    #roleTextOne{
+                        margin-right: 0.15rem;
+                    } #roleTextTwo {
+                        margin-left: 0.15rem;
+                    }
         #role {
             margin: auto auto auto 0.5rem;
             display: flex;
@@ -330,6 +336,36 @@ section {
             #roleQ, #roleA, #roleH, #moodT {
                 color: rgba(255, 255, 255, 0.2);
             }
+    #lfgDown {
+        height: 15rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+    }
+        #lfgDownLeft, #lfgDownRight {
+            margin: auto;
+            height: 14rem;
+        }
+        #lfgDownLeft {
+            margin-right: 0.15rem;
+        }
+            #lfgDownLeft ul {
+                list-style: none;
+                padding: 0.1rem;
+                padding-right: 0.33rem;
+                height: 13.6rem;
+                overflow-y: scroll;
+            }
+                #lfgDownLeft ul li {
+                    cursor: pointer;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    margin: 0.33rem;
+                    padding: 0.33rem;
+                }
+        #lfgDownRight {
+            width: 63%;
+            margin-left: 0.15rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
 
 
 

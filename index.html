@@ -191,11 +191,33 @@
                         <i id="roleD" class="fa-solid fa-hand-fist topIcons"></i>
                     </div>
                     <div id="myRole">
-                        <p id="moodText">Chill</p><p id="roleText">DPS</p>
+                        <p id="moodText">Chill</p>
+                        <div id="roleText">
+                            <p id="roleTextOne">Pure</p>
+                            <p id="roleTextTwo">DPS</p>
+                        </div>
                     </div>
                     <div id="mood">
                         <i id="moodT" class="fa-solid fa-meteor topIcons"></i>
                         <i id="moodC" class="fa-solid fa-umbrella-beach topIcons"></i>
+                    </div>
+                </div>
+                <div id="lfgDown">
+                    <div id="lfgDownLeft">
+                        <ul>
+                            <li>Meta Events</li>
+                            <li>Strikes</li>
+                            <li>Open World</li>
+                            <li>Dungeons</li>
+                            <li>Fractals</li>
+                            <li>Raids</li>
+                            <li>Story</li>
+                            <li>New Player</li>
+                            <li>Guilds</li>
+                        </ul>
+                    </div>
+                    <div id="lfgDownRight">
+
                     </div>
                 </div>
             </div>
@@ -228,7 +250,8 @@
         var moodT = document.getElementById("moodT");
         var moodC = document.getElementById("moodC");
         var moodText = document.getElementById("moodText");
-        var roleText = document.getElementById("roleText");
+        var roleTextOne = document.getElementById("roleTextOne");
+        var roleTextTwo = document.getElementById("roleTextTwo");
 
         var lfgUiArr = [roleQ, roleA, roleH, roleD, moodT, moodC];
         for (let i = 0; i < lfgUiArr.length; i++) {
@@ -236,16 +259,56 @@
         }
 
         var boonArr = [["roleQ", false], ["roleA", false]];
-        var hdArr = [["roleH", false], ["roleD"], true];
+        var hdArr = [["roleH", false], ["roleD", true]];
         var moodArr = [["moodT", false], ["moodC", true]];
+        var arr = [boonArr, hdArr, moodArr];
 
         function UiFunc(e) {
-
-            for (let i = 0; i < lfgUiArr.length; i++) {
-                if (lfgUiArr[i].id.includes(e)) {
-                    // if ()
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (arr[i][j][0] == e && arr[i][j][1] == false) {
+                        arr[i][j][1] = true;
+                        if (j == 0) {
+                            arr[i][j + 1][1] = false;
+                        } if (j == 1) {
+                            arr[i][j - 1][1] = false;
+                        }
+                        break;
+                    }
+                    if (arr[i][j][0] == e && arr[i][j][1] == true && i != 1) {
+                        console.log(arr[i][j], j)
+                        arr[i][j][1] = false;
+                    }
                 }
             }
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (arr[i][j][1] == true) {
+                        for (let k = 0; k < lfgUiArr.length; k++) {
+                            if (lfgUiArr[k].id == arr[i][j][0]) {
+                                lfgUiArr[k].style.color = "white";
+                            }
+                        }
+                    }
+                    if (arr[i][j][1] == false) {
+                        for (let k = 0; k < lfgUiArr.length; k++) {
+                            if (lfgUiArr[k].id == arr[i][j][0]) {
+                                lfgUiArr[k].style.color = "rgba(255, 255, 255, 0.2)";
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (boonArr[0][1] == true) roleTextOne.innerHTML = "Quic";
+            if (boonArr[1][1] == true) roleTextOne.innerHTML = "Alac";
+            if (boonArr[0][1] == false && boonArr[1][1] == false) roleTextOne.innerHTML = "Pure";
+            if (hdArr[0][1] == true) roleTextTwo.innerHTML = "Heals";
+            if (hdArr[1][1] == true) roleTextTwo.innerHTML = "DPS";
+            if (moodArr[0][1] == true) moodText.innerHTML = "Intense";
+            if (moodArr[1][1] == true) moodText.innerHTML = "Chill";
+
+
 
         }
 
