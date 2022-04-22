@@ -181,20 +181,31 @@ section {
         background-size: cover;
         height: 25rem;
         transition: 1s;
-        animation: imgAni;
-        animation-duration: 15s;
-        animation-iteration-count: infinite;
-        animation-play-state: paused;
+        display: flex;
     }
-        #sectionImgTwo {
-            background-image: url("images/C4_Tengu_concept_art.jpg");
-        }
-            #sectionImgThree {
-                background-image: url("images/rEr.jpg");
+        #sectionImgOne {
+            animation: imgAni;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+        } 
+            #sectionImgTwo {
+                animation: imgAni2;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                background-image: url("images/C4_Tengu_concept_art.jpg");
             }
-                #sectionImgFour {
-                    background-image: url("images/Kry.jpg");
+                #sectionImgThree {
+                    animation: imgAni;
+                    animation-duration: 15s;
+                    animation-iteration-count: infinite;
+                    background-image: url("images/rEr.jpg");
                 }
+                    #sectionImgFour {
+                        animation: imgAni2;
+                        animation-duration: 15s;
+                        animation-iteration-count: infinite;
+                        background-image: url("images/Kry.jpg");
+                    }
         @keyframes imgAni {
             0% {
                 background-position-x: 0px;
@@ -202,6 +213,15 @@ section {
                 background-position-x: 48%;
             } 100% {
                 background-position-x: 0px;
+            }
+        }
+        @keyframes imgAni2 {
+            0% {
+                background-position-x: 48%;
+            } 50% {
+                background-position-x: 0px;
+            } 100% {
+                background-position-x: 48%;
             }
         }
     .sectionInfo {
@@ -267,6 +287,49 @@ section {
         margin: 0.5rem auto auto auto;
     }
 
+/* LFG TOOL */
+#lfgTool {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 90%;
+    margin: auto;
+}
+    #lfgUp {
+        display: flex;
+        height: 2rem;
+    }
+        #myRole {
+            margin: auto;
+            position: absolute;
+            left: 50%;
+            width: 15rem;
+            margin-left: -7.5rem;
+            margin-top: 0.43rem;
+            pointer-events: none;
+            display: flex;
+        }
+            #moodText, #roleText {
+                margin: auto;
+            }
+                #moodText {
+                    margin-right: 0.15rem;
+                }
+                #roleText {
+                    margin-left: 0.15rem;
+                }
+        #role {
+            margin: auto auto auto 0.5rem;
+            display: flex;
+        }
+        #mood {
+            margin: auto 0.5rem auto auto;
+        }
+        i {
+            margin: auto 0.15rem;
+            cursor: pointer;
+        } 
+            #roleQ, #roleA, #roleH, #moodT {
+                color: rgba(255, 255, 255, 0.2);
+            }
 
 
 

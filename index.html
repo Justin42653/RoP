@@ -174,12 +174,30 @@
             </p>
         </div>
     </section>
-
+    <!-- UI IMPROVEMTNS -->
     <section id="UiImprovements">
         <div class="sectionHeader">
             <h2>UI Improvements</h2>
         </div>
-        <div id="sectionImgThree" class="sectionImg"></div>
+        <div id="sectionImgThree" class="sectionImg">
+            <div id="lfgTool">
+                <div id="lfgUp">
+                    <div id="role">
+                        <i id="roleQ" class="fa-solid fa-bolt topIcons"></i>
+                        <i id="roleA" class="fa-solid fa-hourglass topIcons"></i>
+                        <i id="roleH" class="fa-solid fa-syringe topIcons"></i>
+                        <i id="roleD" class="fa-solid fa-hand-fist topIcons"></i>
+                    </div>
+                    <div id="myRole">
+                        <p id="moodText">Chill</p><p id="roleText">DPS</p>
+                    </div>
+                    <div id="mood">
+                        <i id="moodT" class="fa-solid fa-meteor topIcons"></i>
+                        <i id="moodC" class="fa-solid fa-umbrella-beach topIcons"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="sectionInfo">
             <div class="sectionUi">
                 <div class="sectionUiTop">
@@ -199,6 +217,38 @@
             </p>
         </div>
     </section>
+    <!-- UI IMPROVEMENTS SCRIPT -->
+    <script>
+        var roleQ = document.getElementById("roleQ")
+        var roleA = document.getElementById("roleA")
+        var roleH = document.getElementById("roleH")
+        var roleD = document.getElementById("roleD")
+        var moodT = document.getElementById("moodT");
+        var moodC = document.getElementById("moodC");
+        var moodText = document.getElementById("moodText");
+        var roleText = document.getElementById("roleText");
+
+        var lfgUiArr = [roleQ, roleA, roleH, roleD, moodT, moodC];
+        for (let i = 0; i < lfgUiArr.length; i++) {
+            lfgUiArr[i].addEventListener("click", () => { UiFunc(lfgUiArr[i].id) })
+        }
+
+        var boonArr = [["roleQ", false], ["roleA", false]];
+        var hdArr = [["roleH", false], ["roleD"], true];
+        var moodArr = [["moodT", false], ["moodC", true]];
+
+        function UiFunc(e) {
+
+            for (let i = 0; i < lfgUiArr.length; i++) {
+                if (lfgUiArr[i].id.includes(e)) {
+                    // if ()
+                }
+            }
+
+        }
+
+
+    </script>
 
     <section id="New Game Modes">
         <div class="sectionHeader">
@@ -367,22 +417,22 @@
 
         }
 
-        function isVisible(e, i) {
-            var x = e.getBoundingClientRect()
-            if (x.top >= 0 && x.left >= 0 && x.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-                && x.right <= (window.innerWidth || document.documentElement.clientWidth)) {
-                for (let j = 0; j < 4; j++) {
-                    if (i == j) sectionImg[i].style.animationPlayState = "running";
-                }
-            }
-        }
+        // function isVisible(e, i) {
+        //     var x = e.getBoundingClientRect()
+        //     if (x.top >= 0 && x.left >= 0 && x.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        //         && x.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+        //         for (let j = 0; j < 4; j++) {
+        //             if (i == j) sectionImg[i].style.animationPlayState = "running";
+        //         }
+        //     }
+        // }
 
-        window.addEventListener("scroll", () => {
-            isVisible(sectionHeader[0], 0)
-            isVisible(sectionHeader[1], 1)
-            isVisible(sectionHeader[2], 2)
-            isVisible(sectionHeader[3], 3)
-        })
+        // window.addEventListener("scroll", () => {
+        //     isVisible(sectionHeader[0], 0)
+        //     isVisible(sectionHeader[1], 1)
+        //     isVisible(sectionHeader[2], 2)
+        //     isVisible(sectionHeader[3], 3)
+        // })
 
     </script>
 
