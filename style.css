@@ -293,6 +293,36 @@ section {
     width: 90%;
     margin: auto;
 }
+    #lfgArrows {
+        position: absolute;
+        display: flex;
+        width: 21rem;
+        text-shadow: 3px 1px 3px black;
+    }
+        #lfgArrows p {
+            margin: auto;
+            animation: lfgArrows;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+            #lfgArrows p:first-child {
+                margin-left: 2.1rem;
+            }
+            #lfgArrows p:last-child {
+                margin-right: 1.6rem;
+            }
+    @keyframes lfgArrows {
+        0% {
+            margin-top: -2rem;
+            color: white;
+        } 50% {
+            margin-top: -1rem;
+            color: rgb(53, 215, 255);
+        } 100% {
+            margin-top: -2rem;
+            color: white;
+        }
+    }
     #lfgUp {
         display: flex;
         height: 2rem;
