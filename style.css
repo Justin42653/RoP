@@ -298,6 +298,8 @@ section {
         display: flex;
         width: 21rem;
         text-shadow: 3px 1px 3px black;
+        pointer-events: none;
+        transition: 1s;
     }
         #lfgArrows p {
             margin: auto;

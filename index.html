@@ -267,6 +267,7 @@
         var listingTextOne = document.getElementById("listingTextOne");
         var listingTextTwo = document.getElementById("listingTextTwo");
         var listingTextThree = document.getElementById("listingTextThree");
+        var lfgArrows = document.getElementById("lfgArrows");
 
         var lfgUiArr = [roleQ, roleA, roleH, roleD, moodT, moodC];
         for (let i = 0; i < lfgUiArr.length; i++) {
@@ -279,6 +280,7 @@
         var arr = [boonArr, hdArr, moodArr];
 
         function UiFunc(e) {
+            lfgArrows.style.opacity = "0";
             for (let i = 0; i < arr.length; i++) {
                 for (let j = 0; j < arr[i].length; j++) {
                     if (arr[i][j][0] == e && arr[i][j][1] == false) {
