@@ -205,19 +205,26 @@
                 <div id="lfgDown">
                     <div id="lfgDownLeft">
                         <ul>
-                            <li>Meta Events</li>
-                            <li>Strikes</li>
-                            <li>Open World</li>
-                            <li>Dungeons</li>
-                            <li>Fractals</li>
-                            <li>Raids</li>
-                            <li>Story</li>
-                            <li>New Player</li>
-                            <li>Guilds</li>
+                            <li class="lfgList">Strikes</li>
+                            <li class="lfgList">Meta Events</li>
+                            <li class="lfgList">Open World</li>
+                            <li class="lfgList">Dungeons</li>
+                            <li class="lfgList">Fractals</li>
+                            <li class="lfgList">Raids</li>
+                            <li class="lfgList">Story</li>
+                            <li class="lfgList">New Player</li>
+                            <li class="lfgList">Guilds</li>
                         </ul>
                     </div>
                     <div id="lfgDownRight">
-
+                        <div id="listing">
+                            <p id="listingTextOne">Harvest Temple (7/10) <br>
+                                &nbsp;&nbsp;"Anything is fine!"</p>
+                            <p id="listingTextTwo">Aetherblade CM (3/10) <br>
+                                &nbsp;&nbsp;"Let's get angry but not at each other!"</p>
+                            <p id="listingTextThree">Shiverpeak Pass (1/10) <br>
+                                &nbsp;&nbsp;"2g Speedrun gogogogo"</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -237,7 +244,8 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Role search and
                 assignment<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Chill or Intense mood
-                toggle
+                toggle <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> If you can see a group, you qualify
             </p>
         </div>
     </section>
@@ -252,6 +260,9 @@
         var moodText = document.getElementById("moodText");
         var roleTextOne = document.getElementById("roleTextOne");
         var roleTextTwo = document.getElementById("roleTextTwo");
+        var listingTextOne = document.getElementById("listingTextOne");
+        var listingTextTwo = document.getElementById("listingTextTwo");
+        var listingTextThree = document.getElementById("listingTextThree");
 
         var lfgUiArr = [roleQ, roleA, roleH, roleD, moodT, moodC];
         for (let i = 0; i < lfgUiArr.length; i++) {
@@ -309,9 +320,111 @@
             if (moodArr[1][1] == true) moodText.innerHTML = "Chill";
 
 
-
+            listingFunc();
         }
 
+        function listingFunc() {
+            if (moodText.innerHTML == "Chill") {
+                if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Pure") {
+                    listingTextOne.innerHTML = `Harvest Temple (7/10) <br>
+                            &nbsp;&nbsp;"Anything is fine!"`
+                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Let's get angry but not at each other!"`
+                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun gogogogo"`
+                }
+                if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Alac") {
+                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Heyooooo!"`
+                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Let's get angry but not at each other!"`
+                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun gogogogo"`
+                }
+                if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Quic") {
+                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Heyooooo!"`
+                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Let's get angry but not at each other!"`
+                    listingTextThree.innerHTML = `Jade Junkyard (9/10) <br>
+                            &nbsp;&nbsp;"We like the quicks!!"`
+                }
+                if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Alac") {
+                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Heyooooo!"`
+                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Let's get angry but not at each other!"`
+                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun gogogogo"`
+                }
+                if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Pure") {
+                    listingTextOne.innerHTML = `Boneskinner (5/10) <br>
+                            &nbsp;&nbsp;"Come one come all..."`
+                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Let's get angry but not at each other!"`
+                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun gogogogo"`
+                }
+                if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Quic") {
+                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Heyooooo!"`
+                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Let's get angry but not at each other!"`
+                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun gogogogo"`
+                }
+            }
+            if (moodText.innerHTML == "Intense") {
+                    if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Pure") {
+                        listingTextOne.innerHTML = `Harvest Temple (7/10) <br>
+                            &nbsp;&nbsp;"Link full legendaries"`
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Know mechs, HS, BS, Monster trucks"`
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun or kick"`
+                    }
+                    if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Alac") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Necro bring worm, all ranged dps"`
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Know mechs, HS, BS, Monster trucks"`
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun or kick"`
+                    }
+                    if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Quic") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Necro bring worm, all ranged dps"`
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Know mechs, HS, BS, Monster trucks"`
+                        listingTextThree.innerHTML = `Jade Junkyard (9/10) <br>
+                            &nbsp;&nbsp;"link 1000 proof BONES"`
+                    }
+                    if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Alac") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Necro bring worm, all ranged dps"`
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Know mechs, HS, BS, Monster trucks"`
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun or kick"`
+                    }
+                    if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Pure") {
+                        listingTextOne.innerHTML = `Boneskinner (5/10) <br>
+                            &nbsp;&nbsp;"GRRRR ROOOF ROOOF"`
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Know mechs, HS, BS, Monster trucks"`
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun or kick"`
+                    }
+                    if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Quic") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                            &nbsp;&nbsp;"Necro bring worm, all ranged dps"`
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                            &nbsp;&nbsp;"Know mechs, HS, BS, Monster trucks"`
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                            &nbsp;&nbsp;"2g Speedrun or kick"`
+                    }
+                }
+        }
 
     </script>
 
@@ -349,6 +462,7 @@
         var details = document.getElementsByClassName("sectionDetails");
         var glowCall = document.getElementsByClassName("glowCall");
         var sectionHeader = document.getElementsByClassName("sectionHeader");
+        var lfgTool = document.getElementById("lfgTool");
 
         document.getElementsByClassName("UiButtonWrap")[2].style.width = "3.3rem";
         document.getElementsByClassName("UiButtonWrap")[3].style.width = "3.3rem";
@@ -446,13 +560,17 @@
                     UiText[2].innerHTML = "New LFG Tool"
                     details[2].innerHTML = `                <span style="font-family: 'NewKrytan'">-</span> Easily find a group of likeminded players<br>
                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Role search and assignment<br>
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Chill or Intense mood toggle`
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Chill or Intense mood toggle<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> If you can see a group, you qualify`
+                    lfgTool.style.display = "block";
+
                 }
                 if (x == 7) {
                     UiText[2].innerHTML = "New Quest Log"
                     details[2].innerHTML = `<span style="font-family: 'NewKrytan'">-</span>Multitudes of adventures hidden as achievements have been converted 
                                                                                            into easier to discover quests<br>
                     "I'm no achievement hunter but I am a quest completionist! This book's handy!" - Gutleg`
+                    lfgTool.style.display = "none";
                 }
             }
             if (x >= 8 && x < 10) {
@@ -502,89 +620,6 @@
     </script>
 
 
-
-    <!-- <section class="sections" id="lfgToolWrapper">
-        <h1>NEW LFG TOOL</h1>
-        <div id="lfgToolOuter">
-            <div id="upperLfg">
-                <div id="roleWrapper">
-                    <p id="roleName">Pure Dps</p>
-                    <div id="roleSelection">
-                        <i id="quickster" class="fa-solid fa-bolt topIcons"></i>
-                        <i id="alacriter" class="fa-solid fa-hourglass topIcons"></i>
-                        <i id="healer" class="fa-solid fa-syringe topIcons"></i>
-                        <i id="damager" class="fa-solid fa-hand-fist topIcons"></i>
-                    </div>
-                </div>
-                <div id="intensityToggle">
-                    <p id="moodText">chill</p>
-                    <div id="intensityIcons">
-                        <i id="tense" class="fa-solid fa-meteor topIcons"></i>
-                        <i id="chill" class="fa-solid fa-umbrella-beach topIcons"></i>
-                    </div>
-                </div>
-            </div>
-            <div id="lowerLfg">
-                <div id="leftLfg">
-
-                </div>
-                <div id="rightLfg">
-
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-    <!-- SCRIPT: LFG TOOL -->
-    <!-- <script>
-        //ROLE SELECTION ------------------------------------
-        var quickster = document.getElementById("quickster");
-        var alacriter = document.getElementById("alacriter");
-        var healer = document.getElementById("healer");
-        var damager = document.getElementById("damager");
-        var roleName = document.getElementById("roleName");
-        //default role is damager
-        damager.style.color = "white";
-
-        //MOOD SELECTION -------------------------------
-        var chill = document.getElementById("chill");
-        var tense = document.getElementById("tense");
-        var moodText = document.getElementById("moodText");
-        //default mood is chill
-        chill.style.color = "white";
-        // array of variables
-        var iconArr = [quickster, alacriter, healer, damager, tense, chill];
-
-        //add event listeners to each clickable icon
-        var topIcons = document.getElementsByClassName("topIcons");
-        for (let i = 0; i < topIcons.length; i++) {
-            topIcons[i].addEventListener("click", () => { lfgUpper(topIcons[i]["id"]) })
-        }
-
-        var quiAlac = [["quickster", 0], ["alacriter", 0]];
-        var healDps = [["healer", 0], ["damager", 0]];
-        var tensity = [["tense", 0], ["chill", 0]];
-
-        function lfgUpper(iconClicked) {
-            for (let i = 0; i < 2; i++) {
-                if (iconClicked == quiAlac[i][0]) {
-                    quiAlac[i][1] = 1;
-                }
-                if (iconClicked == healDps[i][0]) {
-
-                }
-                if (iconClicked == tensity[i][0]) {
-
-                }
-            }
-
-            console.log(quiAlac[0], quiAlac[1]);
-            console.log(healDps[0], healDps[1]);
-            console.log(tensity[0], tensity[1]);
-
-        }
-    </script> -->
 
 </body>
 
