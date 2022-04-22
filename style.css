@@ -32,6 +32,7 @@
 body {
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: rgb(22, 22, 22);
 }
 
 section, header {
@@ -58,10 +59,11 @@ p {
     background-position-x: -200px;
     display: flex;
     user-select: none;
+    height: 40rem;
 }
     #heroTitle {
         margin: auto;
-        margin-top: 12rem;
+        margin-top: 14rem;
         padding: 0.5rem;
         width: 20rem;
         display: flex;
@@ -114,7 +116,7 @@ p {
     #heroP {
         margin: auto;
         width: 16rem;
-        margin-top: -13rem;
+        margin-top: -15.5rem;
         text-align: center;
         font-size: 0.9rem;
         text-shadow: 3px 0px 3px rgba(0, 0, 0, 0.705);
@@ -132,18 +134,18 @@ p {
 
 @keyframes bounceArrow {
     0% {
-        top: 30rem;
+        top: 33rem;
     } 50% {
-        top: 31rem;
+        top: 35rem;
     } 100% {
-        top: 30rem;
+        top: 33rem;
     }
 }
 
 /* STORY */
 #story {
     position: absolute;
-    top: 21.75rem;
+    top: 25rem;
     width: 5rem;
     left: 50%;
     margin-left: -3.1rem;
@@ -166,6 +168,7 @@ p {
 /* SECTION */
 section {
     background-color: rgb(58, 43, 26);
+    width: 100vw;
 }
     .sectionHeader {
         height: 3rem;
@@ -331,10 +334,8 @@ section {
     }
         #myRole {
             margin: auto;
-            position: absolute;
-            left: 50%;
-            width: 15rem;
-            margin-left: -7.5rem;
+            width: 10rem;
+            margin-left: 0rem;
             margin-top: 0.43rem;
             pointer-events: none;
             display: flex;
@@ -412,57 +413,42 @@ section {
                 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* #lfgToolWrapper {
-    background-image: url("images/rivenEarth.jpg");
+@media screen and (min-width: 760px) {
+    section {
+        width: 48.5vw;
+        margin: 0.15rem;
+    }
+    #sectionsWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1400px) {
+    section {
+        width: 24.7vw;
+        margin: 0.1rem auto;
+    }
+    #sectionsWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #hero {
+        height: 55rem;
+    }
+}
+@media screen and (min-width: 670px) {
+    #hero {
+        background-position-x: 0px;
+    }
 }
 
-    #lfgToolWrapper h1 {
-        color: white;
-        margin: auto;
-        margin-top: 2.5rem;
-    }
-    #lfgToolOuter {
-        border: 1px solid black;
-        height: 20rem;
-        width: 20rem;
-        margin: auto;
-        margin-bottom: 17.5rem;
-        background-color: rgba(0, 0, 0, 0.788);
-    }
-    #upperLfg {
-        height: 2.5rem;
-        display: flex;
-    }
-        #roleWrapper, #intensityToggle {
-            border: 1px solid rgba(255, 255, 255, 0.137);
-            width: 50%;
-            height: 95%;
-            margin: auto;
-            margin-left: 0;
-            display: flex;
-        }
-            #roleWrapper p, #roleSelection, #moodText, #intensityIcons, #intensityToggle p{
-                margin: auto;
-            }
-            #roleWrapper i, #intensityIcons i {
-                cursor: pointer;
-                color: rgb(77, 77, 77);
-            }
 
 
-    #lowerLfg {
-        border-top: none;
-        height: 17.4rem;
-    } */
+
+
+
+
+
+
+
+
