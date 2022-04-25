@@ -53,6 +53,10 @@ p {
     font-family: "NewKrytan";
 }
 
+/* #sectionsWrapper {
+   
+} */
+
 /* HERO */
 #hero {
     background-image: url("images/leviathan.jpg");
@@ -142,38 +146,18 @@ p {
     }
 }
 
-/* STORY */
-#story {
-    position: absolute;
-    top: 25rem;
-    width: 5rem;
-    left: 50%;
-    margin-left: -3.1rem;
-    z-index: 20;
-    display: flex;
-    border-radius: 15px;
-    user-select: none;
-    cursor: pointer;
-    transition: 1s;
-    text-decoration: underline;
-}
-
-    #story p {
-        padding: 0.33rem;
-        margin: auto;
-        transition: 1s;
-    }
-
-
 /* SECTION */
 section {
     background-color: rgb(58, 43, 26);
     width: 100vw;
 }
     .sectionHeader {
-        height: 3rem;
         display: flex;
-        background-color: rgb(136, 99, 50);
+        text-shadow: 2px 0px 5px black;
+        width: fit-content;
+        margin: 1rem auto;
+        border-bottom: 3px solid rgb(255, 186, 73);
+        padding: 0.33rem;
     }
         .sectionHeader h2 {
             margin: auto;
@@ -182,9 +166,10 @@ section {
         background-image: url("images/AWR.jpg");
         background-position: center;
         background-size: cover;
-        height: 25rem;
+        height: 35rem;
         transition: 1s;
         display: flex;
+        flex-direction: column;
     }
         #sectionImgOne {
             animation: imgAni;
@@ -227,8 +212,20 @@ section {
                 background-position-x: 48%;
             }
         }
+    .UiText {
+        margin: auto;
+        margin-top: -1.45rem;
+        height: 2.5rem;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: fit-content;
+        padding: 0.8rem 1rem 0rem 1rem;
+        border-left: 3px solid rgb(70, 129, 137);
+        border-right: 3px solid rgb(70, 129, 137);
+    }
     .sectionInfo {
         height: 10rem;
+        margin: auto auto 0rem auto;
     }
         .sectionUi {
             height: 3rem;
@@ -287,7 +284,11 @@ section {
             }
     .sectionDetails {
         width: 21rem;
-        margin: 0.5rem auto auto auto;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 0.33rem;
+        border-left: 3px solid rgb(70, 129, 137);
+        border-right: 3px solid rgb(70, 129, 137);
     }
 
 /* LFG TOOL */
@@ -296,38 +297,6 @@ section {
     width: 90%;
     margin: auto;
 }
-    #lfgArrows {
-        position: absolute;
-        display: flex;
-        width: 21rem;
-        text-shadow: 1px 1px 1px black;
-        pointer-events: none;
-        transition: 1s;
-    }
-        #lfgArrows p {
-            margin: auto;
-            animation: lfgArrows;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-        }
-            #lfgArrows p:first-child {
-                margin-left: 2.1rem;
-            }
-            #lfgArrows p:last-child {
-                margin-right: 1.6rem;
-            }
-    @keyframes lfgArrows {
-        0% {
-            margin-top: -2rem;
-            color: white;
-        } 50% {
-            margin-top: -1rem;
-            color: rgb(53, 215, 255);
-        } 100% {
-            margin-top: -2rem;
-            color: white;
-        }
-    }
     #lfgUp {
         display: flex;
         height: 2rem;

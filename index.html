@@ -18,7 +18,7 @@
             <h2 id="hT2">RITE <span id="hT3">OF</span> PASSAGE</h2>
         </div>
         <div id="heroP">
-            <p>The fabled leviathon of the depths makes it's way towards Lions Arch. Ally with the Lionhawk Coalition
+            <p>The fabled deep sea monster makes it's way towards Lions Arch. Ally with the Lionhawk Coalition
                 to defend your home!</p>
         </div>
         <p id="bounceArrow" class="newKrytan">p</p>
@@ -31,7 +31,7 @@
         var hT1 = document.getElementById("hT1");
         var hT2 = document.getElementById("hT2");
         var hT3 = document.getElementById("hT3");
-        var story = document.getElementById("story");
+        // var story = document.getElementById("story");
 
         window.addEventListener("scroll", function () {
             if (this.pageYOffset > 200) {
@@ -41,10 +41,10 @@
                     hT2.classList.add("hT2");
                     hT3.classList.add("hT3");
                     document.getElementById("bounceArrow").style.opacity = "0";
-                    if (story.innerHTML == "Full Story") {
-                        story.style.opacity = "0";
-                        story.style.pointerEvents = "none"
-                    }
+                    // if (story.innerHTML == "Full Story") {
+                    //     story.style.opacity = "0";
+                    //     story.style.pointerEvents = "none"
+                    // }
                     title.style.zIndex = "100";
                     animateFlag = false;
                 }
@@ -55,8 +55,8 @@
                 hT2.classList.remove("hT2");
                 hT3.classList.remove("hT3");
                 document.getElementById("bounceArrow").style.opacity = "1";
-                story.style.opacity = "1";
-                story.style.pointerEvents = "all";
+                // story.style.opacity = "1";
+                // story.style.pointerEvents = "all";
                 title.style.zIndex = "10";
                 animateFlag = true;
             }
@@ -71,316 +71,265 @@
 
     </script>
 
-    <!-- STORY -->
-    <div id="story">
-        <p id="storyText">Full Story</p>
-    </div>
-    <!-- STORY SCRIPT -->
-    <script>
-        var story = document.getElementById("story");
-        var storyText = document.getElementById("storyText");
-        var storyTog = false;
 
-        story.addEventListener("click", () => storyFunc());
-        function storyFunc() {
-            if (!storyTog) {
-                story.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
-                story.style.textDecoration = "none"
-                story.style.top = "13rem";
-                story.style.width = "20rem";
-                story.style.marginLeft = "-10rem";
-                story.style.position = "fixed";
-                story.style.pointerEvents = "none"
-                storyText.style.opacity = "0";
-                storyTog = true;
-                setTimeout(() => {
-                    storyText.innerHTML = `"The age of dragons is over but danger never rests for Tyrians. What is this ancient leviathon that Soo-Won 
-                    defended us from? Where did it come from? Why does it make it's way towards Lions Arch? No matter, it's young are already
-                    arriving at their doorsteps, there is no longer time for questions. <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Tengu of the Dominion of
-                    Winds and the Lion Guard have formed an alliance known as the Lionhawk Coalition. I too will help my newfound allies." - Detective Rama <br><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close`
-                    storyText.style.opacity = "1";
-                    story.style.pointerEvents = "all"
-                }, 1000)
-                storyText.style.padding = "1rem"
-            } else {
-                story.style.backgroundColor = "rgba(0, 0, 0, 0)";
-                story.style.textDecoration = "underline"
-                story.style.top = "21.75rem";
-                story.style.width = "5rem";
-                story.style.marginLeft = "-3.1rem";
-                story.style.position = "absolute";
-                storyTog = false;
-                story.style.pointerEvents = "none"
-                setTimeout(() => {
-                    storyText.innerHTML = `Full Story`
-                    story.style.pointerEvents = "all"
-                }, 1000)
-                storyText.innerHTML = `Full Story`
-                storyText.style.padding = "0.33rem"
+    <div id="sectionsWrapper">
+        <!-- SECTIONS -->
+        <section id="tyriaRediscovered">
+            <div id="sectionImgOne" class="sectionImg">
+                <div class="sectionHeader">
+                    <h2>Tyria Rediscovered</h2>
+                </div>
+                <div class="sectionInfo">
+                    <div class="sectionUi">
+                        <div class="sectionUiTop">
+                            <div class="UiButtonWrap">
+                                <div class="UiButton"></div>
+                                <div class="UiButton glowCall"></div>
+                                <div class="UiButton"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="UiText">Central Tyria Changed</h3>
+                    <p class="sectionDetails">
+                        <span class="newKrytan">-</span> Core Maps have been repolished to modernity <br>
+                        <span class="newKrytan">-</span> Challenging bosses have invaded coastal maps<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="newKrytan">j</span> Strike Mission version of each
+                        with a new
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; difficulty
+                        setting for fresh recruits
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="newWaysToPlay">
+            <div id="sectionImgTwo" class="sectionImg">
+                <div class="sectionHeader">
+                    <h2>New Ways To Play</h2>
+                </div>
+                <div class="sectionInfo">
+                    <div class="sectionUi">
+                        <div class="sectionUiTop">
+                            <div class="UiButtonWrap">
+                                <div class="UiButton"></div>
+                                <div class="UiButton glowCall"></div>
+                                <div class="UiButton"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="UiText">New Playable Race: Tengu</h3>
+                    <p class="sectionDetails">
+                        <span style="font-family: 'NewKrytan'">-</span> New Starting Zone: Dominion of Winds <br>
+                        <span style="font-family: 'NewKrytan'">-</span> Written dialogue & toggle-able chirp noises
+                        as speech replacement for all old story content<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Who knew Tyrians
+                        spoke
+                        bird?!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- UI IMPROVEMTNS -->
+        <section id="UiImprovements">
+            <div id="sectionImgThree" class="sectionImg">
+                <div class="sectionHeader">
+                    <h2>UI Improvements</h2>
+                </div>
+                <div style="display: none" id="lfgTool">
+                    <div id="lfgUp">
+                        <div id="role">
+                            <i id="roleQ" class="fa-solid fa-bolt topIcons"></i>
+                            <i id="roleA" class="fa-solid fa-hourglass topIcons"></i>
+                            <i id="roleH" class="fa-solid fa-syringe topIcons"></i>
+                            <i id="roleD" class="fa-solid fa-hand-fist topIcons"></i>
+                        </div>
+                        <div id="myRole">
+                            <p id="moodText">Chill</p>
+                            <div id="roleText">
+                                <p id="roleTextOne">Pure</p>
+                                <p id="roleTextTwo">DPS</p>
+                            </div>
+                        </div>
+                        <div id="mood">
+                            <i id="moodT" class="fa-solid fa-meteor topIcons"></i>
+                            <i id="moodC" class="fa-solid fa-umbrella-beach topIcons"></i>
+                        </div>
+                    </div>
+                    <div id="lfgDown">
+                        <div id="lfgDownLeft">
+                            <ul>
+                                <li class="lfgList">Strikes</li>
+                                <li class="lfgList">Meta Events</li>
+                                <li class="lfgList">Open World</li>
+                                <li class="lfgList">Dungeons</li>
+                                <li class="lfgList">Fractals</li>
+                                <li class="lfgList">Raids</li>
+                                <li class="lfgList">Story</li>
+                                <li class="lfgList">New Player</li>
+                                <li class="lfgList">Guilds</li>
+                            </ul>
+                        </div>
+                        <div id="lfgDownRight">
+                            <div id="listing">
+                                <p id="listingTextOne">Harvest Temple (7/10) <br>
+                                    &nbsp;&nbsp;"Anything is fine!"</p>
+                                <p id="listingTextTwo">Aetherblade CM (3/10) <br>
+                                    &nbsp;&nbsp;"Let's get angry but not at each other!"</p>
+                                <p id="listingTextThree">Shiverpeak Pass (1/10) <br>
+                                    &nbsp;&nbsp;"2g Speedrun gogogogo"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionInfo">
+                    <div class="sectionUi">
+                        <div class="sectionUiTop">
+                            <div class="UiButtonWrap">
+                                <div class="UiButton"></div>
+                                <div class="UiButton glowCall"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="UiText">New LFG Tool</h3>
+                    <p class="sectionDetails">
+                        <span style="font-family: 'NewKrytan'">-</span> Easily find a group of likeminded players<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Role search and
+                        assignment<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Chill or Intense
+                        mood
+                        toggle <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> If you can see a
+                        group, you're needed
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- UI IMPROVEMENTS SCRIPT -->
+        <script>
+            var roleQ = document.getElementById("roleQ")
+            var roleA = document.getElementById("roleA")
+            var roleH = document.getElementById("roleH")
+            var roleD = document.getElementById("roleD")
+            var moodT = document.getElementById("moodT");
+            var moodC = document.getElementById("moodC");
+            var moodText = document.getElementById("moodText");
+            var roleTextOne = document.getElementById("roleTextOne");
+            var roleTextTwo = document.getElementById("roleTextTwo");
+            var listingTextOne = document.getElementById("listingTextOne");
+            var listingTextTwo = document.getElementById("listingTextTwo");
+            var listingTextThree = document.getElementById("listingTextThree");
+
+            var lfgUiArr = [roleQ, roleA, roleH, roleD, moodT, moodC];
+            for (let i = 0; i < lfgUiArr.length; i++) {
+                lfgUiArr[i].addEventListener("click", () => { UiFunc(lfgUiArr[i].id) })
             }
-        }
 
-    </script>
-<div id="sectionsWrapper">
-    <!-- SECTIONS -->
-    <section id="tyriaRediscovered">
-        <div class="sectionHeader">
-            <h2>Tyria Rediscovered</h2>
-        </div>
-        <div id="sectionImgOne" class="sectionImg"></div>
-        <div class="sectionInfo">
-            <div class="sectionUi">
-                <div class="sectionUiTop">
-                    <div class="UiButtonWrap">
-                        <div class="UiButton"></div>
-                        <div class="UiButton glowCall"></div>
-                        <div class="UiButton"></div>
-                    </div>
-                </div>
-                <h3 class="UiText">Central Tyria Changed</h3>
-            </div>
-            <p class="sectionDetails">
-                <span class="newKrytan">-</span> Core Maps have been repolished to modernity <br>
-                <span class="newKrytan">-</span> Challenging bosses have invaded coastal maps<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="newKrytan">j</span> Strike Mission version of each with a new
-                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; difficulty
-                setting for fresh recruits
-            </p>
-        </div>
-    </section>
+            var boonArr = [["roleQ", false], ["roleA", false]];
+            var hdArr = [["roleH", false], ["roleD", true]];
+            var moodArr = [["moodT", false], ["moodC", true]];
+            var arr = [boonArr, hdArr, moodArr];
 
-    <section id="newWaysToPlay">
-        <div class="sectionHeader">
-            <h2>New Ways To Play</h2>
-        </div>
-        <div id="sectionImgTwo" class="sectionImg"></div>
-        <div class="sectionInfo">
-            <div class="sectionUi">
-                <div class="sectionUiTop">
-                    <div class="UiButtonWrap">
-                        <div class="UiButton"></div>
-                        <div class="UiButton glowCall"></div>
-                        <div class="UiButton"></div>
-                    </div>
-                </div>
-                <h3 class="UiText">New Playable Race: Tengu</h3>
-            </div>
-            <p class="sectionDetails">
-                <span style="font-family: 'NewKrytan'">-</span> New Starting Zone: Dominion of Winds <br>
-                <span style="font-family: 'NewKrytan'">-</span> Written dialogue & toggle-able chirp noises
-                as speech replacement for all old story content<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Who knew Tyrians spoke
-                bird?!
-            </p>
-        </div>
-    </section>
-    <!-- UI IMPROVEMTNS -->
-    <section id="UiImprovements">
-        <div class="sectionHeader">
-            <h2>UI Improvements</h2>
-        </div>
-        <div id="sectionImgThree" class="sectionImg">
-            <div id="lfgTool">
-                <div id="lfgArrows">
-                    <p style="font-family:NewKrytan">p</p>
-                    <p style="font-family:NewKrytan">p</p>
-                </div>
-                <div id="lfgUp">
-                    <div id="role">
-                        <i id="roleQ" class="fa-solid fa-bolt topIcons"></i>
-                        <i id="roleA" class="fa-solid fa-hourglass topIcons"></i>
-                        <i id="roleH" class="fa-solid fa-syringe topIcons"></i>
-                        <i id="roleD" class="fa-solid fa-hand-fist topIcons"></i>
-                    </div>
-                    <div id="myRole">
-                        <p id="moodText">Chill</p>
-                        <div id="roleText">
-                            <p id="roleTextOne">Pure</p>
-                            <p id="roleTextTwo">DPS</p>
-                        </div>
-                    </div>
-                    <div id="mood">
-                        <i id="moodT" class="fa-solid fa-meteor topIcons"></i>
-                        <i id="moodC" class="fa-solid fa-umbrella-beach topIcons"></i>
-                    </div>
-                </div>
-                <div id="lfgDown">
-                    <div id="lfgDownLeft">
-                        <ul>
-                            <li class="lfgList">Strikes</li>
-                            <li class="lfgList">Meta Events</li>
-                            <li class="lfgList">Open World</li>
-                            <li class="lfgList">Dungeons</li>
-                            <li class="lfgList">Fractals</li>
-                            <li class="lfgList">Raids</li>
-                            <li class="lfgList">Story</li>
-                            <li class="lfgList">New Player</li>
-                            <li class="lfgList">Guilds</li>
-                        </ul>
-                    </div>
-                    <div id="lfgDownRight">
-                        <div id="listing">
-                            <p id="listingTextOne">Harvest Temple (7/10) <br>
-                                &nbsp;&nbsp;"Anything is fine!"</p>
-                            <p id="listingTextTwo">Aetherblade CM (3/10) <br>
-                                &nbsp;&nbsp;"Let's get angry but not at each other!"</p>
-                            <p id="listingTextThree">Shiverpeak Pass (1/10) <br>
-                                &nbsp;&nbsp;"2g Speedrun gogogogo"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sectionInfo">
-            <div class="sectionUi">
-                <div class="sectionUiTop">
-                    <div class="UiButtonWrap">
-                        <div class="UiButton"></div>
-                        <div class="UiButton glowCall"></div>
-                    </div>
-                </div>
-                <h3 class="UiText">New LFG Tool</h3>
-            </div>
-            <p class="sectionDetails">
-                <span style="font-family: 'NewKrytan'">-</span> Easily find a group of likeminded players<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Role search and
-                assignment<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> Chill or Intense mood
-                toggle <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 'NewKrytan'">j</span> If you can see a group, you're needed
-            </p>
-        </div>
-    </section>
-    <!-- UI IMPROVEMENTS SCRIPT -->
-    <script>
-        var roleQ = document.getElementById("roleQ")
-        var roleA = document.getElementById("roleA")
-        var roleH = document.getElementById("roleH")
-        var roleD = document.getElementById("roleD")
-        var moodT = document.getElementById("moodT");
-        var moodC = document.getElementById("moodC");
-        var moodText = document.getElementById("moodText");
-        var roleTextOne = document.getElementById("roleTextOne");
-        var roleTextTwo = document.getElementById("roleTextTwo");
-        var listingTextOne = document.getElementById("listingTextOne");
-        var listingTextTwo = document.getElementById("listingTextTwo");
-        var listingTextThree = document.getElementById("listingTextThree");
-        var lfgArrows = document.getElementById("lfgArrows");
-
-        var lfgUiArr = [roleQ, roleA, roleH, roleD, moodT, moodC];
-        for (let i = 0; i < lfgUiArr.length; i++) {
-            lfgUiArr[i].addEventListener("click", () => { UiFunc(lfgUiArr[i].id) })
-        }
-
-        var boonArr = [["roleQ", false], ["roleA", false]];
-        var hdArr = [["roleH", false], ["roleD", true]];
-        var moodArr = [["moodT", false], ["moodC", true]];
-        var arr = [boonArr, hdArr, moodArr];
-
-        function UiFunc(e) {
-            lfgArrows.style.opacity = "0";
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr[i].length; j++) {
-                    if (arr[i][j][0] == e && arr[i][j][1] == false) {
-                        arr[i][j][1] = true;
-                        if (j == 0) {
-                            arr[i][j + 1][1] = false;
-                        } if (j == 1) {
-                            arr[i][j - 1][1] = false;
+            function UiFunc(e) {
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr[i].length; j++) {
+                        if (arr[i][j][0] == e && arr[i][j][1] == false) {
+                            arr[i][j][1] = true;
+                            if (j == 0) {
+                                arr[i][j + 1][1] = false;
+                            } if (j == 1) {
+                                arr[i][j - 1][1] = false;
+                            }
+                            break;
                         }
-                        break;
-                    }
-                    if (arr[i][j][0] == e && arr[i][j][1] == true && i != 1) {
-                        console.log(arr[i][j], j)
-                        arr[i][j][1] = false;
+                        if (arr[i][j][0] == e && arr[i][j][1] == true && i != 1) {
+                            console.log(arr[i][j], j)
+                            arr[i][j][1] = false;
+                        }
                     }
                 }
-            }
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr[i].length; j++) {
-                    if (arr[i][j][1] == true) {
-                        for (let k = 0; k < lfgUiArr.length; k++) {
-                            if (lfgUiArr[k].id == arr[i][j][0]) {
-                                lfgUiArr[k].style.color = "white";
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr[i].length; j++) {
+                        if (arr[i][j][1] == true) {
+                            for (let k = 0; k < lfgUiArr.length; k++) {
+                                if (lfgUiArr[k].id == arr[i][j][0]) {
+                                    lfgUiArr[k].style.color = "white";
+                                }
                             }
                         }
-                    }
-                    if (arr[i][j][1] == false) {
-                        for (let k = 0; k < lfgUiArr.length; k++) {
-                            if (lfgUiArr[k].id == arr[i][j][0]) {
-                                lfgUiArr[k].style.color = "rgba(255, 255, 255, 0.2)";
+                        if (arr[i][j][1] == false) {
+                            for (let k = 0; k < lfgUiArr.length; k++) {
+                                if (lfgUiArr[k].id == arr[i][j][0]) {
+                                    lfgUiArr[k].style.color = "rgba(255, 255, 255, 0.2)";
+                                }
                             }
                         }
                     }
                 }
+
+                if (boonArr[0][1] == true) roleTextOne.innerHTML = "Quic";
+                if (boonArr[1][1] == true) roleTextOne.innerHTML = "Alac";
+                if (boonArr[0][1] == false && boonArr[1][1] == false) roleTextOne.innerHTML = "Pure";
+                if (hdArr[0][1] == true) roleTextTwo.innerHTML = "Heals";
+                if (hdArr[1][1] == true) roleTextTwo.innerHTML = "DPS";
+                if (moodArr[0][1] == true) moodText.innerHTML = "Intense";
+                if (moodArr[1][1] == true) moodText.innerHTML = "Chill";
+
+
+                listingFunc();
             }
 
-            if (boonArr[0][1] == true) roleTextOne.innerHTML = "Quic";
-            if (boonArr[1][1] == true) roleTextOne.innerHTML = "Alac";
-            if (boonArr[0][1] == false && boonArr[1][1] == false) roleTextOne.innerHTML = "Pure";
-            if (hdArr[0][1] == true) roleTextTwo.innerHTML = "Heals";
-            if (hdArr[1][1] == true) roleTextTwo.innerHTML = "DPS";
-            if (moodArr[0][1] == true) moodText.innerHTML = "Intense";
-            if (moodArr[1][1] == true) moodText.innerHTML = "Chill";
-
-
-            listingFunc();
-        }
-
-        function listingFunc() {
-            if (moodText.innerHTML == "Chill") {
-                if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Pure") {
-                    listingTextOne.innerHTML = `Harvest Temple (7/10) <br>
+            function listingFunc() {
+                if (moodText.innerHTML == "Chill") {
+                    if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Pure") {
+                        listingTextOne.innerHTML = `Harvest Temple (7/10) <br>
                             &nbsp;&nbsp;"Anything is fine!"`
-                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
                             &nbsp;&nbsp;"Let's get angry but not at each other!"`
-                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
                             &nbsp;&nbsp;"2g Speedrun gogogogo"`
-                }
-                if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Alac") {
-                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                    }
+                    if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Alac") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
                             &nbsp;&nbsp;"Heyooooo!"`
-                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
                             &nbsp;&nbsp;"Let's get angry but not at each other!"`
-                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
                             &nbsp;&nbsp;"2g Speedrun gogogogo"`
-                }
-                if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Quic") {
-                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                    }
+                    if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Quic") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
                             &nbsp;&nbsp;"Heyooooo!"`
-                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
                             &nbsp;&nbsp;"Let's get angry but not at each other!"`
-                    listingTextThree.innerHTML = `Jade Junkyard (9/10) <br>
+                        listingTextThree.innerHTML = `Jade Junkyard (9/10) <br>
                             &nbsp;&nbsp;"We like the quicks!!"`
-                }
-                if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Alac") {
-                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                    }
+                    if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Alac") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
                             &nbsp;&nbsp;"Heyooooo!"`
-                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
                             &nbsp;&nbsp;"Let's get angry but not at each other!"`
-                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
                             &nbsp;&nbsp;"2g Speedrun gogogogo"`
-                }
-                if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Pure") {
-                    listingTextOne.innerHTML = `Boneskinner (5/10) <br>
+                    }
+                    if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Pure") {
+                        listingTextOne.innerHTML = `Boneskinner (5/10) <br>
                             &nbsp;&nbsp;"Come one come all..."`
-                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
                             &nbsp;&nbsp;"Let's get angry but not at each other!"`
-                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
                             &nbsp;&nbsp;"2g Speedrun gogogogo"`
-                }
-                if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Quic") {
-                    listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
+                    }
+                    if (roleTextTwo.innerHTML == "Heals" && roleTextOne.innerHTML == "Quic") {
+                        listingTextOne.innerHTML = `Whisper of Jormag (5/10) <br>
                             &nbsp;&nbsp;"Heyooooo!"`
-                    listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
+                        listingTextTwo.innerHTML = `Aetherblade CM (3/10) <br>
                             &nbsp;&nbsp;"Let's get angry but not at each other!"`
-                    listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
+                        listingTextThree.innerHTML = `Shiverpeak Pass (1/10) <br>
                             &nbsp;&nbsp;"2g Speedrun gogogogo"`
+                    }
                 }
-            }
-            if (moodText.innerHTML == "Intense") {
+                if (moodText.innerHTML == "Intense") {
                     if (roleTextTwo.innerHTML == "DPS" && roleTextOne.innerHTML == "Pure") {
                         listingTextOne.innerHTML = `Harvest Temple (7/10) <br>
                             &nbsp;&nbsp;"Link full legendaries"`
@@ -430,34 +379,36 @@
                             &nbsp;&nbsp;"2g Speedrun or kick"`
                     }
                 }
-        }
+            }
 
-    </script>
+        </script>
 
-    <section id="New Game Modes">
-        <div class="sectionHeader">
-            <h2>New Game Modes</h2>
-        </div>
-        <div id="sectionImgFour" class="sectionImg"></div>
-        <div class="sectionInfo">
-            <div class="sectionUi">
-                <div class="sectionUiTop">
-                    <div class="UiButtonWrap">
-                        <div class="UiButton"></div>
-                        <div class="UiButton glowCall"></div>
-                    </div>
+        <section id="New Game Modes">
+            <div id="sectionImgFour" class="sectionImg">
+                <div class="sectionHeader">
+                    <h2>New Game Modes</h2>
                 </div>
-                <h3 class="UiText">Player Housing</h3>
+                <div class="sectionInfo">
+                    <div class="sectionUi">
+                        <div class="sectionUiTop">
+                            <div class="UiButtonWrap">
+                                <div class="UiButton"></div>
+                                <div class="UiButton glowCall"></div>
+                            </div>
+                        </div>
+                        <h3 class="UiText">Player Housing</h3>
+                    </div>
+                    <p class="sectionDetails">
+                        <span style="font-family: 'NewKrytan'">-</span> Open a private instance at any location<br>
+                        <span style="font-family: 'NewKrytan'">-</span> Earn building materials from playing the game
+                        <br>
+                        <span style="font-family: 'NewKrytan'">-</span> Build with your friends and guildmates<br>
+                        <span style="font-family: 'NewKrytan'">-</span> Unlock new structure recipes
+                    </p>
+                </div>
             </div>
-            <p class="sectionDetails">
-                <span style="font-family: 'NewKrytan'">-</span> Open a private instance at any location<br>
-                <span style="font-family: 'NewKrytan'">-</span> Earn building materials from playing the game <br>
-                <span style="font-family: 'NewKrytan'">-</span> Build with your friends and guildmates<br>
-                <span style="font-family: 'NewKrytan'">-</span> Unlock new structure recipes
-            </p>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
     <!-- SECTION SCRIPT -->
     <script>
@@ -628,7 +579,7 @@
 
     <!-- FOOTER -->
     <footer>
-        
+
     </footer>
     <!-- FOOTER SCRIPT -->
 
