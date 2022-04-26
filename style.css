@@ -170,6 +170,7 @@ section {
         transition: 1s;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
         #sectionImgOne {
             animation: imgAni;
@@ -223,6 +224,26 @@ section {
         border-left: 3px solid rgb(70, 129, 137);
         border-right: 3px solid rgb(70, 129, 137);
     }
+    .sectionArrows {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        margin-top: 17rem;
+        user-select: none;
+        position: absolute;
+    }
+        .sectionArrows p {
+            font-size: 2.5rem;
+            margin: auto;
+            cursor: pointer;
+        }
+            .sectionArrows p:first-child {
+                margin-left: 0.25rem;
+            }
+            .sectionArrows p:last-child {
+                margin-right: 0.25rem;
+            }
+
     .sectionInfo {
         height: 10rem;
         margin: auto auto 0rem auto;
@@ -234,10 +255,6 @@ section {
             display: flex;
             flex-direction: column;
         }
-            .sectionUi h3 {
-                margin: auto;
-                font-weight: bold;
-            }
         .sectionUiTop {
             display: flex;
             width: 9rem;
@@ -294,8 +311,12 @@ section {
 /* LFG TOOL */
 #lfgTool {
     background-color: rgba(0, 0, 0, 0.9);
-    width: 90%;
-    margin: auto;
+    width: 17rem;
+    left: 50%;
+    top: 6rem;
+    margin-left: -8.5rem;
+    border-radius: 5px;
+    position: absolute;
 }
     #lfgUp {
         display: flex;
@@ -303,7 +324,6 @@ section {
     }
         #myRole {
             margin: auto;
-            width: 10rem;
             margin-left: 0rem;
             margin-top: 0.43rem;
             pointer-events: none;
@@ -349,13 +369,15 @@ section {
         }
         #lfgDownLeft {
             margin-right: 0.15rem;
+            /* display: none; */
         }
             #lfgDownLeft ul {
                 list-style: none;
                 padding: 0.1rem;
-                padding-right: 0.33rem;
+                padding-right: 0rem;
                 height: 13.6rem;
                 overflow-y: scroll;
+                scrollbar-width: thin;
             }
                 #lfgDownLeft ul li {
                     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -367,10 +389,14 @@ section {
                     color: white
                 }
         #lfgDownRight {
-            width: 63%;
+            width: 60%;
             margin-left: 0.15rem;
+            margin-right: 0.4rem;
             border: 1px solid rgba(255, 255, 255, 0.5);
             display: flex;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            /* display: none; */
         }
             #listing {
                 margin: auto;
@@ -378,8 +404,12 @@ section {
             }
                 #listing p {
                     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-                    margin: 1rem;
+                    margin: 0.33rem;
                 }
+    /* footer {
+        width: 100vw;
+        height: 10rem;
+    } */
 
 
 @media screen and (min-width: 760px) {
